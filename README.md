@@ -4,6 +4,36 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Current Time</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10em;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+    <script>
+        function updateTime() {
+            var date = new Date();
+            var hours = date.getHours().toString().padStart(2, '0');
+            var minutes = date.getMinutes().toString().padStart(2, '0');
+            var seconds = date.getSeconds().toString().padStart(2, '0');
+            var time = hours + ':' + minutes + ':' + seconds;
+            document.body.textContent = time;
+        }
+        
+        setInterval(updateTime, 1000); // Update time every second
+    </script>
+</head>
+<body>
+</body>
+</html>
+
+<html>
+<head>
     <title>Color Changing Screen</title>
     <style>
         body {
